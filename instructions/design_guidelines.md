@@ -15,5 +15,11 @@
 
 ## 3. 스타일링 컨벤션
 - **Tailwind CSS 전용:** 인라인 스타일이나 외부 CSS 파일을 사용하지 않는다.
-- **테마 변수 사용:** `tailwind.config.ts`에 정의된 색상(Primary, Secondary, Accent 등)과 간격 수치만 사용한다. 임의의 수치(예: `w-[342px]`) 사용은 지양하며, 부득이한 경우 주석으로 이유를 명시한다.
+- **테마 변수 사용:** `tailwind.config.ts` 및 `globals.css`에 정의된 색상만 사용한다. 임의의 수치(예: `w-[342px]`) 사용은 지양하며, 부득이한 경우 주석으로 이유를 명시한다.
+- **Brand Identity (컬러 시스템):** 기존 아이엠웹(Imweb)의 시각적 정체성을 완벽히 유지하기 위해 다음 컬러를 프로젝트 표준으로 삼는다.
+  - **Primary (포인트 및 CTA 버튼):** Gold (`#C8A147`)
+  - **Background & Secondary (배경 및 다이얼로그):** Navy Blue (`#001A33`)
+  - **Text & Accent:** Dark Green (`#2D4C3D`)
+  - **Secondary Background:** Light Beige (`#F1EEE6`)
+- **Logo 사용 원칙:** 헤더 영역에는 텍스트 로고 대신 원본 이미지 로고(`https://cdn.imweb.me/thumbnail/20260311/693284faad5a7.png`)를 `<Image>` 컴포넌트로 우선 배치한다.
 - **반응형 설계:** 모바일 우선(Mobile-First) 원칙을 따르며, `sm:`, `md:`, `lg:` 접두사를 활용해 중단점별 디자인을 반드시 적용한다.

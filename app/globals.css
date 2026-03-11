@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --breakpoint-3xl: 1920px;
 
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Primary Theme Colors - Gold */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-light: #fef9e7;
+  --color-primary-dark: #a38234;
+
+  /* Deep Navy Blue Backgrounds & Texts */
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Secondary Accent (Logo Dark Green) */
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #001c3e; /* Deep Navy text for standard readability */
+
+    --primary: #ebc678; /* Imweb Gold */
+    --primary-foreground: #001c3e;
+
+    --secondary: #0a1b33; /* Imweb Dark Navy */
+    --secondary-foreground: #ffffff;
+
+    --muted: #ebe4d5; /* Warm Beige background from Imweb */
+    --muted-foreground: #4a5568;
+
+    --accent: #004d40; /* Dark Teal */
+    --accent-foreground: #ffffff;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #c8a147;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a1b33; /* Dark mode uses Imweb Navy */
+      --foreground: #ebe4d5;
+
+      --primary: #ebc678;
+      --primary-foreground: #001c3e;
+
+      --secondary: #1a2a3a;
+      --secondary-foreground: #ebe4d5;
+
+      --muted: #1e293b;
+      --muted-foreground: #cbd5e1;
+
+      --accent: #004d40;
+      --accent-foreground: #ffffff;
+
+      --destructive: #7f1d1d;
+      --destructive-foreground: #f8fafc;
+
+      --border: #1e293b;
+      --input: #1e293b;
+      --ring: #c8a147;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
