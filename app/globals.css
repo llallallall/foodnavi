@@ -66,30 +66,28 @@
     --transition-standard: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a1b33; /* Dark mode uses Imweb Navy */
-      --foreground: #ebe4d5;
+  .dark {
+    --background: #1e293b; /* Softer Dark Blue-Gray for Reduced Eye Strain */
+    --foreground: #f1f5f9; /* Soft Off-White for Comfortable Reading */
 
-      --primary: #ebc678;
-      --primary-foreground: #001c3e;
+    --primary: #ebc678;
+    --primary-foreground: #0f172a;
 
-      --secondary: #1a2a3a;
-      --secondary-foreground: #ebe4d5;
+    --secondary: #0f172a; /* Deeper Navy for Cards/Sections within Dark Mode */
+    --secondary-foreground: #f1f5f9;
 
-      --muted: #1e293b;
-      --muted-foreground: #cbd5e1;
+    --muted: #334155; /* Softened Slate for secondary backgrounds */
+    --muted-foreground: #cbd5e1;
 
-      --accent: #004d40;
-      --accent-foreground: #ffffff;
+    --accent: #0f766e; /* Brighter Teal for visibility in dark mode */
+    --accent-foreground: #ffffff;
 
-      --destructive: #7f1d1d;
-      --destructive-foreground: #f8fafc;
+    --destructive: #991b1b;
+    --destructive-foreground: #f8fafc;
 
-      --border: #1e293b;
-      --input: #1e293b;
-      --ring: #c8a147;
-    }
+    --border: #334155;
+    --input: #334155;
+    --ring: #ebc678;
   }
 }
 
