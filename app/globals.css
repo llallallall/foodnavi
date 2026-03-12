@@ -38,19 +38,19 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #001c3e; /* Deep Navy text for standard readability */
+    --background: #fafafa; /* Human-centered Off-White */
+    --foreground: #0a1b33; /* Soft Dark Navy for better contrast */
 
-    --primary: #ebc678; /* Imweb Gold */
-    --primary-foreground: #001c3e;
+    --primary: #c8a147; /* Standardized Imweb Gold */
+    --primary-foreground: #ffffff;
 
     --secondary: #0a1b33; /* Imweb Dark Navy */
     --secondary-foreground: #ffffff;
 
-    --muted: #ebe4d5; /* Warm Beige background from Imweb */
+    --muted: #f1eee6; /* Softened Warm Beige */
     --muted-foreground: #4a5568;
 
-    --accent: #004d40; /* Dark Teal */
+    --accent: #2d4c3d; /* Refined Dark Green from identity */
     --accent-foreground: #ffffff;
 
     --destructive: #ef4444;
@@ -59,6 +59,11 @@
     --border: #e2e8f0;
     --input: #e2e8f0;
     --ring: #c8a147;
+
+    /* Human-centered variables */
+    --off-white: #fafafa;
+    --soft-navy: #0f172a;
+    --transition-standard: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -93,7 +98,14 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: Arial, Helvetica, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.7; /* Golden Ratio typography */
+    letter-spacing: -0.01em;
+  }
+
+  /* Standard smooth transition for all interactive elements */
+  a, button, div, span {
+    transition: all var(--transition-standard);
   }
 }
