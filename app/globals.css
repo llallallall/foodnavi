@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import "tailwindcss";
 
 @theme {
@@ -26,28 +27,36 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+  --border: var(--border);
+  --input: var(--input);
+  --ring: var(--ring);
 
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+
+  /* Premium UI Effects (Tridge Style) */
+  --shadow-tridge: 2px 4px 32px rgba(33, 43, 54, 0.16);
+  --shadow-tridge-hover: 4px 8px 40px rgba(33, 43, 54, 0.22);
+
+  /* Custom Font Families */
+  --font-sans: "Pretendard", var(--font-inter-sans), -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-serif: "Pretendard", var(--font-inter-sans), -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
 @layer base {
   :root {
-    --background: #fafafa; /* Human-centered Off-White */
-    --foreground: #0a1b33; /* Soft Dark Navy for better contrast */
+    --background: #fdfbf7; /* Parchment/Off-White for premium feel */
+    --foreground: #1f2937; /* Charcoal for readability */
 
-    --primary: #c8a147; /* Standardized Imweb Gold */
+    --primary: #b89742; /* Antique Gold */
     --primary-foreground: #ffffff;
 
-    --secondary: #0a1b33; /* Imweb Dark Navy */
+    --secondary: #0a1d37; /* Deep Navy */
     --secondary-foreground: #ffffff;
 
-    --muted: #f1eee6; /* Softened Warm Beige */
+    --muted: #f3f0e8; /* Warmer, softer beige */
     --muted-foreground: #4a5568;
 
     --accent: #2d4c3d; /* Refined Dark Green from identity */
@@ -58,25 +67,25 @@
 
     --border: #e2e8f0;
     --input: #e2e8f0;
-    --ring: #c8a147;
+    --ring: #b89742;
 
     /* Human-centered variables */
-    --off-white: #fafafa;
-    --soft-navy: #0f172a;
+    --off-white: #fdfbf7;
+    --soft-navy: #0a1d37;
     --transition-standard: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: #1e293b; /* Softer Dark Blue-Gray for Reduced Eye Strain */
+    --background: #081528; /* Even deeper navy for true dark mode */
     --foreground: #f1f5f9; /* Soft Off-White for Comfortable Reading */
 
-    --primary: #ebc678;
-    --primary-foreground: #0f172a;
+    --primary: #b89742;
+    --primary-foreground: #081528;
 
-    --secondary: #0f172a; /* Deeper Navy for Cards/Sections within Dark Mode */
+    --secondary: #0a1d37; /* Deep Navy for Cards/Sections within Dark Mode */
     --secondary-foreground: #f1f5f9;
 
-    --muted: #334155; /* Softened Slate for secondary backgrounds */
+    --muted: #162a45; /* Softened Navy for secondary backgrounds */
     --muted-foreground: #cbd5e1;
 
     --accent: #0f766e; /* Brighter Teal for visibility in dark mode */
@@ -85,25 +94,35 @@
     --destructive: #991b1b;
     --destructive-foreground: #f8fafc;
 
-    --border: #334155;
-    --input: #334155;
-    --ring: #ebc678;
+    --border: #1e3350;
+    --input: #1e3350;
+    --ring: #b89742;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    line-height: 1.7; /* Golden Ratio typography */
+    line-height: 1.6; /* Tridge readable body line-height */
     letter-spacing: -0.01em;
+    word-break: keep-all;
+    font-weight: 400; /* Tridge base weight */
+  }
+
+  h1 {
+    letter-spacing: -0.02em; /* Tridge Hero Tracking */
+    line-height: 1.2; /* Tridge Punchy Hero Leading */
+    font-weight: 700;
+  }
+
+  h2, h3, h4, h5, h6, .font-serif {
+    letter-spacing: -0.01em; /* Tridge Subheading Tracking */
+    line-height: 1.3;
+    font-weight: 700;
   }
 
   /* Standard smooth transition for all interactive elements */
   a, button, div, span {
-    transition: all var(--transition-standard);
+    @apply transition-all duration-300;
   }
 }

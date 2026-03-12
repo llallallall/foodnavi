@@ -27,9 +27,9 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Link href="/diagnosis/apply">
-            <Button className="bg-primary hover:bg-primary-dark text-secondary font-bold shadow-lg rounded-full px-6 py-6 border-[3px] border-background text-sm">
-              ✦ 무료 수출진단 신청하기
+          <Link href="/diagnosis/apply" className="md:hidden">
+            <Button className="bg-primary hover:bg-primary-dark text-secondary font-bold shadow-lg rounded-none px-5 py-5 border-[2px] border-background text-xs sm:text-sm">
+              무료 수출진단
             </Button>
           </Link>
         </div>

@@ -1,0 +1,12 @@
+Button Candidate -> .crfrAc.soso-button-l: height:56px;padding-left:24px;padding-right:24px;font-size:16px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:20px;border-radius:0px;
+Button Candidate -> .crfrAc.soso-button-m: height:40px;padding-left:20px;padding-right:20px;font-size:14px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:18px;border-radius:0px;
+Button Candidate -> .crfrAc.soso-button-s: height:28px;padding-left:12px;padding-right:12px;font-size:12px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:16px;border-radius:0px;
+Button Candidate -> .gXARIJ.soso-button-l: height:56px;padding-left:24px;padding-right:24px;font-size:16px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:20px;border-radius:0px;
+Button Candidate -> .gXARIJ.soso-button-m: height:40px;padding-left:20px;padding-right:20px;font-size:14px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:18px;border-radius:0px;
+Button Candidate -> .gXARIJ.soso-button-s: height:28px;padding-left:12px;padding-right:12px;font-size:12px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:16px;border-radius:0px;
+Button Candidate -> .dhvAmB.soso-button-l: height:56px;padding-left:24px;padding-right:24px;font-size:16px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:20px;border-radius:0px;
+Button Candidate -> .dhvAmB.soso-button-m: height:40px;padding-left:20px;padding-right:20px;font-size:14px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:18px;border-radius:0px;
+Button Candidate -> .dhvAmB.soso-button-s: height:28px;padding-left:12px;padding-right:12px;font-size:12px;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;line-height:16px;border-radius:0px;
+H1/Title Candidate -> h1: font-size:2em;margin:0.67em 0;
+H1/Title Candidate -> h1: font-size:2em;margin:0.67em 0;
+H1/Title Candidate -> h1: font-size:2em;margin:0.67em 0;

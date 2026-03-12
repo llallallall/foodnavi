@@ -1,24 +1,26 @@
 import Link from "next/link"
 import { Button } from "@/components/common/Button"
 import { Card, CardContent } from "@/components/common/Card"
-import { Search, ShieldAlert, ArrowRight, Map, CheckCircle2, AlertCircle, HelpCircle, FileQuestion, LineChart, Target, FileCheck, Check, FileText, Users, Truck, PlusSquare, BadgeCheck } from "lucide-react"
+import { Search, ShieldAlert, ArrowRight, Map, CheckCircle2, AlertCircle, HelpCircle, FileQuestion, LineChart, Target, FileCheck, Check, FileText, Users, Truck, PlusSquare, BadgeCheck, Building2, Ship, Tag, Calculator, Scale, ClipboardList } from "lucide-react"
+import { TrendChart } from "@/components/dashboard/TrendChart"
+import { SuccessCases } from "@/components/marketing/SuccessCases"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-sans">
 
       {/* 2. Hero Section */}
-      <section className="relative bg-secondary text-secondary-foreground py-24 px-4 md:px-6 overflow-hidden">
+      <section className="relative bg-secondary text-secondary-foreground py-32 px-4 md:px-6 overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
         <div className="container relative z-10 mx-auto max-w-5xl 2xl:max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-16 2xl:gap-24">
           <div className="flex-1 space-y-8">
-            <div className="inline-block border border-white/30 rounded-sm px-4 py-1.5 text-sm font-medium tracking-wide">
+            <div className="inline-block border border-white/30 rounded-none px-4 py-1.5 text-sm font-medium tracking-wide">
               • 일본 식품 수출 전문 컨설팅
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl min-[1920px]:text-[5rem] font-extrabold leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-[52px]">
               일본 식품 수출,<br />
-              <span className="text-primary">규제 장벽에 막혀</span><br />
+              <span className="text-primary italic">규제 장벽에 막혀</span><br />
               포기하셨나요?
             </h1>
             <p className="text-lg text-white/80 max-w-lg leading-relaxed">
@@ -45,7 +47,7 @@ export default function Home() {
           </div>
 
           <div className="flex-1 w-full max-w-md xl:max-w-[440px] 2xl:max-w-[480px]">
-            <div className="bg-[#051320] border border-white/10 rounded-xl p-8 space-y-8 shadow-2xl">
+            <div className="bg-[#051320] border border-white/10 rounded-none p-8 space-y-8 shadow-2xl">
               <h3 className="text-xl font-bold text-primary mb-6">서비스 진행 프로세스</h3>
               <div className="space-y-8">
                 <div className="flex gap-4">
@@ -90,42 +92,105 @@ export default function Home() {
       </section>
 
       {/* 4. Statistics Bar */}
-      <section className="bg-secondary py-12 px-4 border-b border-white/5 relative">
+      <section className="bg-secondary py-20 px-4 border-b border-white/5 relative">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
         <div className="container relative z-10 mx-auto xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px] grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
           <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-extrabold text-primary">26<span className="text-xl lg:text-2xl font-bold">年</span></div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary">26<span className="text-xl lg:text-2xl font-bold ml-1">年</span></div>
             <div className="font-bold text-white/90">일본 식품 수출지원</div>
             <div className="text-sm text-white/60">전문 경력</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-extrabold text-primary">양방향</div>
-            <div className="font-bold text-white/90">수출업체 &amp; 일본 바이어</div>
-            <div className="text-sm text-white/60">양측 현장 경험</div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary">5,000<span className="text-xl lg:text-2xl font-bold ml-1">+</span></div>
+            <div className="font-bold text-white/90">누적 성분 검토</div>
+            <div className="text-sm text-white/60">일본 규제 적합성 분석</div>
           </div>
           <div className="space-y-3">
-            <div className="text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">통관사</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary tracking-tight">98<span className="text-xl lg:text-2xl font-bold ml-1">%</span></div>
+            <div className="font-bold text-white/90 text-lg">통관 성공률</div>
+            <div className="text-sm text-white/40 tracking-wide">사전 검토 완료 건 기준</div>
+          </div>
+          <div className="space-y-3">
+            <div className="text-4xl lg:text-5xl font-bold text-primary tracking-tight">통관사</div>
             <div className="font-bold text-white/90 text-lg">일본 국가자격</div>
-            <div className="text-sm text-white/40 tracking-wide">통관사 자격 보유</div>
+            <div className="text-sm text-white/40 tracking-wide">원스톱 통관 대행</div>
           </div>
-          <div className="space-y-3">
-            <div className="text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">3<span className="text-xl lg:text-2xl font-bold ml-1">days</span></div>
-            <div className="font-bold text-white/90 text-lg">무료 진단보고서</div>
-            <div className="text-sm text-white/40 tracking-wide">3일 이내 발송</div>
+        </div>
+      </section>
+
+      {/* 4.5 Data Intelligence Section (New) */}
+      <section className="py-32 px-4 md:px-6 bg-[#fdfbf7] relative">
+        <div className="container mx-auto max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px]">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="space-y-4">
+              <p className="text-primary font-bold tracking-widest text-sm md:text-base uppercase">Market Intelligence</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-secondary leading-tight">
+                데이터에 기반한<br />
+                정확한 의사결정
+              </h2>
+            </div>
+            <p className="text-[#4A4A4A] text-lg max-w-lg leading-relaxed md:text-right break-keep">
+              감이나 추측이 아닌, 실시간 통관 데이터와 최신 규제 변화를 분석하여 가장 안전한 일본 수출 경로를 설계합니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Chart Module 1 */}
+            <div className="bg-white border border-border p-8 md:p-10 shadow-tridge rounded-none">
+              <div className="flex justify-between items-center mb-8">
+                <h3 className="font-bold text-xl text-secondary">2026 주요 K-Food 카테고리별 일본 시장 수요 지수</h3>
+                <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded">UPDATED TODAY</span>
+              </div>
+              <TrendChart />
+            </div>
+
+            {/* List Module 2 */}
+            <div className="bg-secondary text-white p-8 md:p-10 shadow-tridge rounded-none">
+              <h3 className="font-bold text-2xl mb-8 flex items-center gap-3">
+                <ShieldAlert className="w-6 h-6 text-primary" />
+                긴급 일본 규제 모니터링
+              </h3>
+              <div className="space-y-0 divide-y divide-white/10">
+                <div className="py-4 first:pt-0">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="bg-red-500/20 text-red-300 text-xs px-2 py-0.5 font-bold rounded">RISK ALERT</span>
+                    <span className="text-white/50 text-xs">2026.03.10 발표</span>
+                  </div>
+                  <p className="font-medium text-white/90">가공식품 내 특정 감미료 (사카린나트륨 등) 사용 기준 강화 예고</p>
+                </div>
+                <div className="py-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="bg-primary/20 text-primary text-xs px-2 py-0.5 font-bold rounded">LABELING</span>
+                    <span className="text-white/50 text-xs">2026.03.02 시행</span>
+                  </div>
+                  <p className="font-medium text-white/90">건강보조식품 원산지 표기법 및 주의사항 폰트 크기 규정 변경안 발효</p>
+                </div>
+                <div className="py-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="bg-[#0f766e]/30 text-[#4fd1c5] text-xs px-2 py-0.5 font-bold rounded">CUSTOMS</span>
+                    <span className="text-white/50 text-xs">2026.02.15 적용</span>
+                  </div>
+                  <p className="font-medium text-white/90">신선 농산물(딸기, 포도 등) 잔류농약 특별 모니터링 검사 항목 3종 추가</p>
+                </div>
+              </div>
+              <Link href="/diagnosis/apply" className="inline-flex items-center mt-6 text-sm text-primary hover:text-white transition-colors">
+                내 제품이 해당 규제에 걸리는지 확인하기 <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 5. Pain Points Section */}
-      <section className="bg-muted pt-32 pb-12 px-4 md:px-6">
+      <section className="bg-muted pt-40 pb-16 px-4 md:px-6">
         <div className="container mx-auto max-w-5xl xl:max-w-[1100px] 2xl:max-w-[1300px] min-[1920px]:max-w-[1500px]">
           <div className="text-left mb-12 space-y-6 max-w-[800px]">
-            <p className="text-primary font-extrabold tracking-widest text-2xl mb-2">혹시 이런 고민이 있으신가요?</p>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-secondary leading-tight">
+            <p className="text-primary font-bold tracking-widest text-xl mb-2">혹시 이런 고민이 있으신가요?</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary leading-tight">
               많은 기업들이 이 벽 앞에서<br className="hidden md:block" />
               포기합니다
             </h2>
-            <p className="text-muted-foreground text-lg lg:text-xl break-keep leading-relaxed mt-8">
+            <p className="text-[#4A4A4A] text-lg lg:text-xl break-keep leading-relaxed mt-8">
               제품의 품질도 중요하지만, 문제는 규제와 유통의 벽입니다.<br className="hidden md:block" />
               Yoon&amp;Partners는 그 벽이 어디에 있는지 정확히 알고 있습니다.
             </p>
@@ -133,42 +198,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-muted pb-32 px-4 md:px-6 relative">
+      <section className="bg-muted pb-40 px-4 md:px-6 relative">
         <div className="container mx-auto max-w-5xl xl:max-w-[1100px] 2xl:max-w-[1300px] min-[1920px]:max-w-[1500px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 min-[1600px]:grid-cols-6 gap-[1px] bg-border/20 border border-border/20 rounded-lg overflow-hidden shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 min-[1600px]:grid-cols-6 gap-[1px] bg-border/20 border border-border/20 rounded-none overflow-hidden shadow-tridge">
             {/* Card 1 */}
             <div className="bg-white p-10 lg:p-12 flex flex-col justify-start hover:bg-white/95 transition-colors">
-              <div className="text-4xl mb-8">📋</div>
+              <ClipboardList className="w-10 h-10 text-primary mb-8 stroke-[1.25]" />
               <h3 className="font-bold text-xl text-secondary mb-5 leading-snug">일본 식품위생법이<br />너무 복잡합니다</h3>
               <p className="text-muted-foreground text-sm leading-relaxed break-keep">원재료 하나하나의 일본 내 허용 여부, 첨가물 사용 기준, 잔류농약 기준... 어디서부터 확인해야 할지 모르겠습니다.</p>
             </div>
             {/* Card 2 */}
             <div className="bg-white p-10 lg:p-12 flex flex-col justify-start hover:bg-white/95 transition-colors">
-              <div className="text-4xl mb-8">🏪</div>
+              <Building2 className="w-10 h-10 text-primary mb-8 stroke-[1.25]" />
               <h3 className="font-bold text-xl text-secondary mb-5 leading-snug">바이어는 어떻게<br />찾아야 하나요?</h3>
               <p className="text-muted-foreground text-sm leading-relaxed break-keep">전시회에 나가도 명함만 교환하고 끝납니다. 분명 현장 반응은 좋았는데, 실제 거래로 이어지는 바이어 만나기가 어렵습니다.</p>
             </div>
             {/* Card 3 */}
             <div className="bg-white p-10 lg:p-12 flex flex-col justify-start hover:bg-white/95 transition-colors">
-              <div className="text-4xl mb-8">🚢</div>
+              <Ship className="w-10 h-10 text-primary mb-8 stroke-[1.25]" />
               <h3 className="font-bold text-xl text-secondary mb-5 leading-snug">통관에서 자꾸<br />막힙니다</h3>
               <p className="text-muted-foreground text-sm leading-relaxed break-keep">수입업체가 요구하는 서류는 다 준비해서 전달했다고 생각했는데 검역에서 반송됐습니다. 무엇이 문제인지조차 파악이 안 됩니다.</p>
             </div>
             {/* Card 4 */}
             <div className="bg-white p-10 lg:p-12 flex flex-col justify-start hover:bg-white/95 transition-colors">
-              <div className="text-4xl mb-8">🏷️</div>
+              <Tag className="w-10 h-10 text-primary mb-8 stroke-[1.25]" />
               <h3 className="font-bold text-xl text-secondary mb-5 leading-snug">일본어 라벨은<br />어떻게 만드나요?</h3>
               <p className="text-muted-foreground text-sm leading-relaxed break-keep">일본 식품표시법에 맞는 라벨 제작이 까다롭습니다. 잘못 표기하면 리콜 위험까지 있습니다.</p>
             </div>
             {/* Card 5 */}
             <div className="bg-white p-10 lg:p-12 flex flex-col justify-start hover:bg-white/95 transition-colors">
-              <div className="text-4xl mb-8">💴</div>
+              <Calculator className="w-10 h-10 text-primary mb-8 stroke-[1.25]" />
               <h3 className="font-bold text-xl text-secondary mb-5 leading-snug">가격 경쟁력이<br />있는지 모릅니다</h3>
               <p className="text-muted-foreground text-sm leading-relaxed break-keep">수출가격에 해상운임, 관세, 통관비용, 현지 배송료, 유통마진을 더하면 일본 시장에서 팔릴 수 있는 가격인지 계산이 안 됩니다.</p>
             </div>
             {/* Card 6 */}
             <div className="bg-white p-10 lg:p-12 flex flex-col justify-start relative hover:bg-white/95 transition-colors">
-              <div className="text-4xl mb-8">🤝</div>
+              <Scale className="w-10 h-10 text-primary mb-8 stroke-[1.25]" />
               <h3 className="font-bold text-xl text-secondary mb-5 leading-snug">어디에 물어봐야<br />정확한 답을 얻나요?</h3>
               <p className="text-muted-foreground text-sm leading-relaxed break-keep">AI도 못 믿겠고, 컨설팅업체도 업체마다 말이 다르고, 어디까지가 맞는 정보인지 판단하기 어렵습니다.</p>
             </div>
@@ -177,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* 6. Differentiation Section  */}
-      <section className="py-24 px-4 md:px-6 bg-secondary text-white relative overflow-hidden">
+      <section className="py-32 px-4 md:px-6 bg-secondary text-white relative overflow-hidden">
         {/* Background Watermark */}
         <div
           className="hidden lg:flex absolute right-0 md:right-10 top-0 bottom-0 items-center justify-center text-[100px] lg:text-[140px] font-black text-white/[0.02] tracking-[0.2em] pointer-events-none select-none"
@@ -189,36 +254,52 @@ export default function Home() {
         <div className="container mx-auto xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px] relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             {/* Left Column */}
-            <div className="lg:w-5/12 space-y-8 sticky top-24 self-start">
+            <div className="w-full lg:w-5/12 space-y-8 lg:sticky lg:top-24 lg:self-start">
               <div className="space-y-4">
-                <p className="text-primary font-bold tracking-widest text-2xl uppercase">왜 Yoon&amp;Partners인가</p>
-                <h2 className="text-4xl lg:text-5xl font-extrabold text-white leading-snug break-keep">
+                <p className="text-primary font-bold tracking-widest text-xl uppercase">왜 Yoon&amp;Partners인가</p>
+                <h2 className="text-4xl lg:text-5xl font-bold text-white leading-snug break-keep">
                   어느 한 쪽만이 아닌<br />
-                  <span className="text-primary">객관적으로 보는 사람의</span><br />
+                  <span className="text-primary italic">객관적으로 보는 사람의</span><br />
                   시각은 다릅니다
                 </h2>
-                <p className="text-white/70 leading-relaxed break-keep mt-6">
+                <p className="text-white/80 leading-relaxed break-keep mt-6">
                   26년간 공공기관에서 수출업체와 일본 바이어 양쪽의 현장을 지켜보았습니다. 특정 품목에 집중할 수밖에 없는 민간 영업직과는 달리 일본의 식품 시장 전체를 폭넓게 바라보고 해법을 찾습니다.
                 </p>
               </div>
 
-              {/* Highlight Box */}
-              <div className="bg-white/[0.03] border-l-2 border-primary p-6 md:p-8 rounded-sm mt-8">
-                <p className="text-primary text-sm font-medium mb-4">핵심 차별점</p>
-                <p className="text-white/90 leading-relaxed break-keep mb-6">
-                  수출업체는 자기 제품의 장점만 보고,<br className="hidden md:block" />
-                  바이어는 단점만 봅니다.
-                </p>
-                <p className="text-white/90 leading-relaxed break-keep">
-                  저는 양쪽의 거래 현장을 수백 번 목도하며<br className="hidden md:block" />
-                  거래가 성사되는 이유와 깨지는 이유를<br className="hidden md:block" />
-                  <span className="text-primary font-bold">제3자의 눈으로 정확히 파악하고 있습니다.</span>
-                </p>
+              {/* Expert Profile Card (Human Touch) */}
+              <div className="bg-white/[0.03] border border-white/10 p-8 rounded-none mt-8 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-secondary border border-primary/30 flex items-center justify-center overflow-hidden">
+                    {/* Placeholder for actual headshot - using icon for now */}
+                    <div className="text-primary text-2xl">👨‍💼</div>
+                  </div>
+                  <div>
+                    <h4 className="text-white text-lg font-bold">윤 (Yoon) 대표</h4>
+                    <p className="text-primary text-sm font-medium">일본 국가자격 통관사</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <p className="text-white/90 leading-relaxed text-lg italic break-keep">
+                    "수출업체는 장점만 보고 바이어는 단점만 봅니다.<br className="hidden md:block" />
+                    저는 거래 현장을 수백 번 목도하며 거래가 성사되는 이유와 깨지는 이유를 제3자의 눈으로 정확히 파악했습니다."
+                  </p>
+                  <div className="pt-4 border-t border-white/10 mt-4">
+                    <ul className="text-white/60 text-sm space-y-2">
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> (전) 한일 수출지원 공공기관 26년 근무</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> (현) 일본 통관사 자격 보유 / 관세 무역 전문가</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> 5,000건 이상 성분 및 라벨링 심사 진행</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Right Column (List) */}
-            <div className="lg:w-7/12">
+            <div className="w-full lg:w-7/12">
               <div className="flex flex-col">
 
                 {/* Item 01 */}
@@ -272,11 +353,11 @@ export default function Home() {
       </section>
 
       {/* 7. Step-by-Step Review Section */}
-      <section className="py-24 px-4 md:px-6 bg-muted relative">
+      <section className="py-32 px-4 md:px-6 bg-muted relative">
         <div className="container mx-auto xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px] relative z-10">
-          <div className="text-center mb-20 space-y-4">
+          <div className="text-center mb-24 space-y-4">
             <p className="text-primary font-bold tracking-widest text-sm md:text-base mb-2">각 단계에서 이런 것들을 검토합니다</p>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-secondary">단계별 검토 내용</h2>
+            <h2 className="text-4xl lg:text-5xl font-serif font-extrabold text-secondary">단계별 검토 내용</h2>
             <p className="text-muted-foreground mt-4 text-lg">
               무료 진단부터 실행 지원까지,<br />
               각 단계에서 전문가가 직접 확인하는 항목들입니다.
@@ -296,8 +377,8 @@ export default function Home() {
                   <Search className="w-8 h-8 lg:w-10 lg:h-10 text-primary" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-secondary mb-4">무료 수출가능성 진단</h3>
-                <div className="bg-primary/20 text-primary font-bold px-6 py-2 rounded-full text-sm mb-8 lg:mb-10">무료 · 3일 이내</div>
-                <div className="bg-background rounded-lg p-6 lg:p-8 w-full shadow-sm flex-grow border border-border/50">
+                <div className="bg-primary/20 text-primary font-bold px-6 py-2 rounded-none text-sm mb-8 lg:mb-10">무료 · 3일 이내</div>
+                <div className="bg-background rounded-none p-6 lg:p-8 w-full shadow-sm flex-grow border border-border/50">
                   <ul className="text-muted-foreground text-sm space-y-4 text-left">
                     <li className="flex items-start gap-3 break-keep"><ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" /> HS코드 분류 및 관세율 확인</li>
                     <li className="flex items-start gap-3 break-keep"><ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" /> 식품위생법 적합성 검토</li>
@@ -315,8 +396,8 @@ export default function Home() {
                   <FileCheck className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-secondary mb-4">맞춤 전략 수립</h3>
-                <div className="bg-[#e2dac8] text-[#867657] font-bold px-6 py-2 rounded-full text-sm mb-8 lg:mb-10">상담 후 진행 · 유료</div>
-                <div className="bg-background rounded-lg p-6 lg:p-8 w-full shadow-sm flex-grow border border-border/50">
+                <div className="bg-[#e2dac8] text-[#867657] font-bold px-6 py-2 rounded-none text-sm mb-8 lg:mb-10">상담 후 진행 · 유료</div>
+                <div className="bg-background rounded-none p-6 lg:p-8 w-full shadow-sm flex-grow border border-border/50">
                   <ul className="text-muted-foreground text-sm space-y-4 text-left">
                     <li className="flex items-start gap-3 break-keep"><ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" /> 해당 제품 시장동향 조사</li>
                     <li className="flex items-start gap-3 break-keep"><ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" /> 식품위생법·약기법 등 규제 대응</li>
@@ -334,8 +415,8 @@ export default function Home() {
                   <Map className="w-8 h-8 lg:w-10 lg:h-10 text-red-300" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-secondary mb-4">실행 지원</h3>
-                <div className="bg-[#e2dac8] text-[#867657] font-bold px-6 py-2 rounded-full text-sm mb-8 lg:mb-10">단계별 진행 · 유료</div>
-                <div className="bg-background rounded-lg p-6 lg:p-8 w-full shadow-sm flex-grow border border-border/50 relative">
+                <div className="bg-[#e2dac8] text-[#867657] font-bold px-6 py-2 rounded-none text-sm mb-8 lg:mb-10">단계별 진행 · 유료</div>
+                <div className="bg-background rounded-none p-6 lg:p-8 w-full shadow-sm flex-grow border border-border/50 relative">
                   <ul className="text-muted-foreground text-sm space-y-4 text-left">
                     <li className="flex items-start gap-3 break-keep"><ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" /> 성분 검토 및 식품표시라벨 작성</li>
                     <li className="flex items-start gap-3 break-keep"><ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" /> 현지 소비자 검증 실시</li>
@@ -352,14 +433,14 @@ export default function Home() {
       </section>
 
       {/* 8. Target Audience Section */}
-      <section className="py-24 px-4 md:px-6 bg-white overflow-hidden border-t border-border">
+      <section className="py-32 px-4 md:px-6 bg-white overflow-hidden border-t border-border">
         <div className="container mx-auto max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px]">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 2xl:gap-24">
 
             {/* Left Column (Sticky Text & CTA) */}
-            <div className="lg:w-1/3 xl:w-1/4 shrink-0 flex flex-col justify-start pt-4 lg:pr-4">
+            <div className="w-full lg:w-1/3 xl:w-1/4 shrink-0 flex flex-col justify-start pt-4 lg:pr-4">
               <p className="text-primary font-bold tracking-widest text-sm lg:text-base mb-4">이런 분들께 맞습니다</p>
-              <h2 className="text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-secondary leading-tight mb-8 break-keep">
+              <h2 className="text-4xl lg:text-5xl 2xl:text-6xl font-serif font-extrabold text-secondary leading-tight mb-8 break-keep">
                 당신의 상황이<br />
                 이 중 하나라면
               </h2>
@@ -368,13 +449,13 @@ export default function Home() {
                 일본 시장에 진지하게 도전하고 싶다면 충분합니다.
               </p>
 
-              <div className="bg-secondary p-8 lg:p-10 rounded-sm shadow-2xl mt-auto">
+              <div className="bg-secondary p-8 lg:p-10 rounded-none shadow-2xl mt-auto">
                 <p className="text-white text-center leading-relaxed break-keep mb-8 text-sm lg:text-base font-bold">
                   지금 바로 무료 진단을 신청하시면<br />
                   3일 이내에 진단 보고서를 보내드립니다.
                 </p>
                 <Link href="/diagnosis/apply" className="block">
-                  <Button className="w-full bg-[#c8a147] hover:bg-[#b08d3a] text-secondary font-bold text-sm md:text-base h-14 rounded-sm border-0 transition-colors">
+                  <Button className="w-full bg-[#c8a147] hover:bg-[#b08d3a] text-secondary font-bold text-sm md:text-base h-14 rounded-none border-0 transition-colors">
                     무료 진단 신청하기 <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
@@ -382,7 +463,7 @@ export default function Home() {
             </div>
 
             {/* Right Column (2x3 Grid) */}
-            <div className="lg:w-2/3 xl:w-3/4">
+            <div className="w-full lg:w-2/3 xl:w-3/4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-white">
 
                 {/* Item 1 */}
@@ -435,15 +516,15 @@ export default function Home() {
       </section>
 
       {/* 8.5 Free Diagnosis Teaser Section (Newly Added) */}
-      <section className="py-24 px-4 md:px-6 bg-secondary text-white border-t border-white/5 relative overflow-hidden">
+      <section className="py-32 px-4 md:px-6 bg-secondary text-white border-t border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
 
         <div className="container mx-auto max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px] relative z-10 text-center">
-          <div className="space-y-4 mb-16">
+          <div className="space-y-4 mb-20">
             <p className="text-primary font-bold tracking-widest text-sm md:text-base">무료 수출가능성 진단</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight break-keep">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold leading-tight tracking-tight break-keep">
               먼저 무료로 확인하세요<br />
-              <span className="text-primary">내 제품, 일본에서 팔릴 수 있는가</span>
+              <span className="text-primary italic">내 제품, 일본에서 팔릴 수 있는가</span>
             </h2>
             <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto leading-relaxed pt-4">
               제품 정보를 입력하시면 전문가 검토를 거쳐<br className="hidden md:block" />
@@ -497,7 +578,7 @@ export default function Home() {
 
           <div className="inline-block">
             <Link href="/diagnosis/apply">
-              <Button size="lg" className="bg-[#c8a147] hover:bg-[#b08d3a] text-secondary font-bold h-16 px-12 text-lg md:text-xl rounded-sm transition-transform hover:scale-105">
+              <Button size="lg" className="bg-[#c8a147] hover:bg-[#b08d3a] text-secondary font-bold h-16 px-12 text-lg md:text-xl rounded-none transition-transform hover:scale-105">
                 무료 수출가능성 진단 신청하기
               </Button>
             </Link>
@@ -506,16 +587,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 8.8 Success Cases (Social Proof) Layer */}
+      <SuccessCases />
+
       {/* 9. Service Introduction Section */}
-      <section className="py-24 px-4 md:px-6 bg-white relative z-10 border-t border-border">
+      <section className="py-32 px-4 md:px-6 bg-white relative z-10 border-t border-border">
         <div className="container mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[1400px] min-[1920px]:max-w-[1700px]">
 
-          <div className="text-center mb-20 flex flex-col items-center">
-            <h2 className="text-5xl md:text-7xl font-black text-[#004d40] uppercase tracking-[0.1em] mb-2">
+          <div className="text-center mb-24 flex flex-col items-center">
+            <h2 className="text-5xl md:text-7xl font-sans font-black text-[#1e3a8a] uppercase tracking-[0.1em] mb-4">
               SERVICE
             </h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-6">서비스 소개</h3>
-            <div className="w-10 h-1 bg-[#004d40]"></div>
+            <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-8">서비스 소개</h3>
+            <div className="w-12 h-1 bg-primary"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -609,7 +693,7 @@ export default function Home() {
 
                 <div className="pt-8">
                   <Link href="/diagnosis/apply">
-                    <Button className="bg-[#c8a147] hover:bg-[#b08d3a] text-secondary font-bold h-16 px-12 text-xl md:text-2xl rounded-sm transition-transform hover:scale-105">
+                    <Button className="bg-[#c8a147] hover:bg-[#b08d3a] text-secondary font-bold h-16 px-12 text-xl md:text-2xl rounded-none transition-transform hover:scale-105">
                       무료 진단 신청하기 <ArrowRight className="ml-2 w-6 h-6" />
                     </Button>
                   </Link>
@@ -626,46 +710,97 @@ export default function Home() {
       <div className="h-32 bg-background relative z-0"></div>
 
       {/* 10. Blog / News Teaser */}
-      <section className="py-24 px-4 md:px-6 bg-background border-t border-border">
+      <section className="py-32 px-4 md:px-6 bg-background border-t border-border">
         <div className="container mx-auto xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px]">
-          <div className="flex justify-between items-end mb-12">
-            <h2 className="text-3xl font-bold text-secondary">일본 수출 가이드 & 뉴스</h2>
+          <div className="flex justify-between items-end mb-16">
+            <h2 className="text-4xl font-bold text-secondary">일본 수출 가이드 & 뉴스</h2>
             <Link href="/community/guide" className="text-primary hover:text-primary-dark font-medium flex items-center">
               전체보기 <ArrowRight className="ml-1 w-4 h-4" />
             </Link>
           </div>
 
-          <div className="space-y-4">
-            <Link href="/community/guide" className="block group">
-              <div className="flex flex-col md:flex-row md:items-center justify-between p-6 border border-border rounded-lg bg-white hover:border-primary transition-colors">
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-secondary group-hover:text-primary transition-colors mb-2">한국산 광어 수출 시 주의점 및 통관 절차 안내</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">일본 현지 통관 사례를 중심으로 주의해야 할 항생제 검사 및 서류 요건을 정리했습니다.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Report 1 */}
+            <Link href="/community/guide" className="block group h-full">
+              <div className="flex flex-col h-full bg-white border border-border rounded-lg overflow-hidden hover:border-primary transition-all hover:shadow-tridge-hover hover:-translate-y-1">
+                <div className="bg-[#f0ebe1]/30 aspect-[4/3] relative overflow-hidden flex items-center justify-center border-b border-[#f0ebe1]">
+                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+                  <FileText className="w-12 h-12 text-primary/40 group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
+                  <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold tracking-widest px-3 py-1 rounded-sm shadow-sm z-10">통관 가이드</div>
                 </div>
-                <div className="mt-4 md:mt-0 md:ml-6 text-sm text-muted-foreground">2026.03.11</div>
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  <span className="text-xs font-bold tracking-widest text-primary/70 mb-3">2026.03.11</span>
+                  <h3 className="text-xl font-bold text-secondary group-hover:text-primary transition-colors mb-4 line-clamp-2 leading-snug">
+                    한국산 수산물 수출 시<br/>가장 빈번한 통관 보류 사유 3가지
+                  </h3>
+                  <p className="text-sm text-secondary/70 leading-relaxed mb-6 line-clamp-3">일본 현지 통관 사례를 중심으로 주의해야 할 항생제 검사 및 서류 요건을 심층적으로 분석했습니다.</p>
+                  <div className="mt-auto pt-4 border-t border-border flex items-center font-bold text-sm text-primary group-hover:text-primary-dark">
+                    리포트 읽기 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
               </div>
             </Link>
-            <Link href="/community/guide" className="block group">
-              <div className="flex flex-col md:flex-row md:items-center justify-between p-6 border border-border rounded-lg bg-white hover:border-primary transition-colors">
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-secondary group-hover:text-primary transition-colors mb-2">2026년 일본 식품위생법 주요 개정사항 요약</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">바뀌는 첨가물 기준 및 포장재 규격에 대한 빠른 대응 가이드를 전해드립니다.</p>
+
+            {/* Report 2 */}
+            <Link href="/community/guide" className="block group h-full">
+              <div className="flex flex-col h-full bg-white border border-border rounded-lg overflow-hidden hover:border-primary transition-all hover:shadow-tridge-hover hover:-translate-y-1">
+                <div className="bg-[#f0ebe1]/30 aspect-[4/3] relative overflow-hidden flex items-center justify-center border-b border-[#f0ebe1]">
+                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+                  <Target className="w-12 h-12 text-primary/40 group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
+                  <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold tracking-widest px-3 py-1 rounded-sm shadow-sm z-10">심층 분석</div>
                 </div>
-                <div className="mt-4 md:mt-0 md:ml-6 text-sm text-muted-foreground">2026.03.05</div>
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  <span className="text-xs font-bold tracking-widest text-primary/70 mb-3">2026.03.05</span>
+                  <h3 className="text-xl font-bold text-secondary group-hover:text-primary transition-colors mb-4 line-clamp-2 leading-snug">
+                    2026 일본 식품위생법<br/>첨가물 개정안 집중 해부
+                  </h3>
+                  <p className="text-sm text-secondary/70 leading-relaxed mb-6 line-clamp-3">바뀌는 감미료, 식용색소 기준 및 포장재 규격에 대한 빠른 대응 가이드와 처방안을 전해드립니다.</p>
+                  <div className="mt-auto pt-4 border-t border-border flex items-center font-bold text-sm text-primary group-hover:text-primary-dark">
+                    리포트 읽기 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
               </div>
             </Link>
-            <Link href="/community/guide" className="block group">
-              <div className="flex flex-col md:flex-row md:items-center justify-between p-6 border border-border rounded-lg bg-white hover:border-primary transition-colors">
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-secondary group-hover:text-primary transition-colors mb-2">일본 대형 벤더사 미팅 시 꼭 준비해야 하는 3가지</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">단순한 제품 소개서로는 부족합니다. 일본 바이어가 계약 전에 가장 까다롭게 확인하는 요소들을 공개합니다.</p>
+
+            {/* Report 3 */}
+            <Link href="/community/guide" className="block group h-full">
+              <div className="flex flex-col h-full bg-white border border-border rounded-lg overflow-hidden hover:border-primary transition-all hover:shadow-tridge-hover hover:-translate-y-1">
+                <div className="bg-[#f0ebe1]/30 aspect-[4/3] relative overflow-hidden flex items-center justify-center border-b border-[#f0ebe1]">
+                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+                  <Users className="w-12 h-12 text-primary/40 group-hover:scale-110 transition-transform duration-500" strokeWidth={1} />
+                  <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold tracking-widest px-3 py-1 rounded-sm shadow-sm z-10">인사이트</div>
                 </div>
-                <div className="mt-4 md:mt-0 md:ml-6 text-sm text-muted-foreground">2026.02.28</div>
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  <span className="text-xs font-bold tracking-widest text-primary/70 mb-3">2026.02.28</span>
+                  <h3 className="text-xl font-bold text-secondary group-hover:text-primary transition-colors mb-4 line-clamp-2 leading-snug">
+                    일본 대형 벤더사 미팅 전<br/>반드시 체크해야 할 3가지
+                  </h3>
+                  <p className="text-sm text-secondary/70 leading-relaxed mb-6 line-clamp-3">단순한 카탈로그로는 부족합니다. 일본 바이어가 수입 계약 직전에 가장 까다롭게 확인하는 요소들을 공개합니다.</p>
+                  <div className="mt-auto pt-4 border-t border-border flex items-center font-bold text-sm text-primary group-hover:text-primary-dark">
+                    리포트 읽기 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
               </div>
             </Link>
+
           </div>
         </div>
       </section>
+
+      {/* Sticky Premium CTA (Desktop Only) */}
+      <div className="fixed bottom-10 right-10 z-50 hidden md:block animate-in fade-in slide-in-from-bottom-8 duration-700">
+        <Link href="/diagnosis/apply">
+          <Button 
+            className="rounded-full shadow-2xl bg-secondary text-primary font-bold px-8 py-4 h-auto text-[15px] border border-primary/30 hover:bg-secondary/95 hover:scale-105 transition-all flex items-center gap-3 group"
+          >
+            <div className="bg-primary/10 p-2 rounded-full">
+              <ClipboardList className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" strokeWidth={1.5} />
+            </div>
+            전문가 무료 진단 신청
+          </Button>
+        </Link>
+      </div>
 
     </div>
   )

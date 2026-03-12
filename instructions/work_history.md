@@ -123,3 +123,54 @@
   - 좌측 텍스트 문단 박스와 우측 서비스 진행 프로세스 카드 사이의 가로 정렬(justify-between, gap-12 lg:gap-16 2xl:gap-24)과 각각의 내부 최대 폭(max-w-md, max-w-[480px]) 속성을 리팩터링하여 넓은 모니터에서도 콘텐츠가 중앙으로 따뜻하게 뭉쳐있도록 포커싱 효과 구현 완료.
   - "혹시 이런 고민이 있으신가요?" (Pain Points) 하단 6열 카드 그리드 영역 역시 넓은 모니터에서 과도하게 퍼지지 않도록 상단 헤더 컨테이너와 동일한 폭(`max-w-5xl xl:max-w-[1100px] 2xl:max-w-[1300px] min-[1920px]:max-w-[1500px]`)으로 최대 넓이를 통일시킴.
   - "서비스 소개" (Service Introduction) 섹션 헤더의 "SERVICE" 텍스트를 원본 이미지와 동일하게 투명 워터마크가 아닌 **진한 초록색 솔리드 텍스트**로 교정하고, 세로 배치 및 하단 라인 간격을 정밀하게 조정하여 가독성을 높임.
+
+## [2026-03-12 10:45] 작업 내역 요약 - 푸드나비 브랜드 고도화 (Phase 1~4 완료)
+- **이슈 바탕:** 단순 서비스 제공을 넘어 최고급 로펌이나 데이터 정보 플랫폼 수준의 권위, 전문성, 신뢰도를 주기 위한 브랜드 고도화 요청(`tasks/imcompleted/푸드나비 브랜드 고도화.md`).
+- **Phase 1 (Brand Identity):**
+  - 원본의 가벼운 색상을 일체 배제하고, `Antique Gold`와 `Deep Navy`를 결합하여 전문성을 극대화함.
+  - 가독성보다는 "전통과 권위"를 나타내기 위해 `Noto Serif KR` 명조체를 주요 헤드라인(`h1`~`h3`) 폰트로 도입.
+  - 여백(Whitespace)을 기존보다 대폭 늘려(예: `py-24` -> `py-32`) 고급스러운 시각적 여유를 부여.
+- **Phase 2 (Expert Trust):**
+  - "통계 바" 섹션을 추상적인 문구에서 **명확한 숫자 데이터**(26년 경력, 5,000+건 검토, 98% 성공률)로 전면 교체.
+  - "왜 Yoon&Partners인가" 영역 내에 대표 통관사의 철학과 약력을 담은 **전문가 프로필 카드(Expert Profile Card)**를 배치하여 휴먼 터치(Human Touch) 신뢰도 상승 유도.
+- **Phase 3 (Data Intelligence):**
+  - Tridge와 같은 데이터 중심 플랫폼의 인상을 주기 위해, 랜딩 페이지 중앙에 **마켓/규제 동향 대시보드(Market Intelligence)** 섹션 신규 추가. 현장의 실시간 데이터를 모니터링하고 있다는 인상 획득.
+- **Phase 4 (Social Proof):**
+  - 무료 진단 버튼 직전 단계에 **검증된 성공 사례(Success Stories)** 양방향 카드섹션을 신규 배치. Problem/Solution 형태로 전문 컨설팅의 실질적인 가치를 증명하도록 설계 완료.
+- **Phase 5 (5-Core Strategies Implementation):**
+  - **Sticky CTA**: 화면 우측 하단에 '전문가 무료 진단 신청' 플로팅 버튼을 고정하여 언제든 문의 가능하도록 유도.
+  - **Premium Line-art Icons**: 기존 이모지 및 단순 아이콘 대신 로펌 컨셉에 어울리는 `lucide-react` 라인아트 아이콘 전면 교체.
+  - **Market Intelligence (TrendChart)**: 정적인 프로그레스바를 지우고 `recharts` 라이브러리를 통해 동적인 카테고리별 수출 수요 차트 삽입.
+  - **Category Tabs in Success Cases**: 성공 사례에 필터 기능(전체, 가공식품 등)을 추가.
+  - **Medicalized Diagnosis Form (`/diagnosis/apply`)**: 무료 진단 신청 과정을 종합검진 예약처럼 'STEP 1, STEP 2' 형식의 프리미엄 폼으로 리팩터링.
+  - **Tracking Timeline (`/mypage`)**: 의뢰인이 현재 진행 단계(예: 성분 분석 중)를 시각적으로 확인할 수 있는 타임라인 UI 구현.
+  - **Deep-dive Insight Cards**: 단순 리스트형 커뮤니티 게시판을 고급화된 '인사이트/심층분석' 리포트 카드 디자인 요소로 변환.
+
+## [2026-03-12 11:00] 작업 내역 요약 - 폰트 및 타이포그래피 전면 개편 (Tridge 스타일)
+- **이슈 바탕:** 진중한 명조체(Noto Serif KR)보다는 Tridge 플랫폼과 같이 단정하고 꽉 찬 고딕/Sans-serif 폰트(자간, 줄간격 최적화)가 고객에게 더욱 높은 '데이터 기반의 솔루션' 신뢰감을 준다는 사용자 피드백 접수.
+- **변경 사항:**
+  - `app/layout.tsx`에서 사용되던 Noto Serif KR 명조체를 제거.
+  - `app/globals.css`에 현대적인 필수 시스템 폰트인 **Pretendard(프리텐다드)** 웹폰트 CDN을 임포트하여 전체 기본 폰트로 지정.
+  - Tridge 웹사이트의 타이포그래피 스타일을 분석하여, **본문 줄간격(1.6)**과 **제목 자간(-0.025em), 줄간격(1.4)**을 세밀하게 재설정하여 가독성과 전문성을 동시에 끌어올림.
+  - 기존 코드베이스에 남아있던 `.font-serif` 클래스들 또한 자동으로 Pretendard 기반의 꽉 찬 고딕 스타일로 렌더링되게 CSS 계층(layer) 오버라이딩 적용.
+
+## [2026-03-12 11:30] 작업 내역 요약 - 폰트/그림자/타이포그래피 세부 정밀 매핑 (Phase 6: Tridge Style 완벽 이식)
+- **이슈 바탕:** 기존 적용한 폰트에 더해, 글꼴 두께(Weight), 색상(Color 대비), 카드 그림자(Shadow Effects)까지 Tridge의 스타일을 정확히 차용하여 더욱 신뢰감 있고 현대적인 B2B 플랫폼 느낌을 구현하고자 함.
+- **변경 사항:**
+  - **폰트 두께 및 타이포 정리:** 랜딩 페이지 전체의 불필요한 `font-serif` 클래스를 전부 제거. 기존 `font-extrabold` (두께 800)로 설정되어 과하게 뚱뚱해 보이던 대제목들을 Tridge 방식에 맞춰 단단하고 세련된 `font-bold` (두께 700)로 수정.
+  - **색상 대비 고도화:** 배경색(Deep Navy / Off-White)과의 대비를 고려하여 본문 텍스트 색상을 `text-[#4A4A4A]` (또는 호환되는 `text-muted-foreground`)로 조정. 장문의 글도 눈이 편안하게 읽히도록 처리.
+  - **그림자(Shadow) 시스템 도입 (CSS Variables):** `globals.css` 내부에 Tridge 특유의 은은하면서도 깊이감 있는 그림자 효과인 `--shadow-tridge: 2px 4px 32px rgba(33, 43, 54, 0.16)` 와 호버 시 반응하는 `--shadow-tridge-hover` 를 새롭게 선언.
+  - **인터랙션 적용:** 인사이트 딥다이브 리포트 카드, 대시보드 그래프 상자, 성공 사례(Success Cases) 카드 등에 커스텀 `shadow-tridge` 클래스를 일괄 적용하여 마우스 오버 시 카드가 자연스럽게 떠오르는 세련된 마이크로 인터랙션을 구현 완료.
+
+## [2026-03-12 12:40] 작업 내역 요약 - 메인 페이지 모바일 레이아웃 겹침 현상 수정 (Phase 7)
+- **이슈 바탕:** 화면 폭이 좁아지는 모바일 환경에서 "왜 Yoon&Partners인가" 영역과 "당신의 상황이 이 중 하나라면" 영역의 텍스트 레이어가 하단 다단 그리드 등과 겹치거나 깨지는 레이아웃 오버플로우 현상 발생.
+- **변경 사항 (`app/page.tsx`):**
+  - **왜 Yoon&Partners인가 (Differentiation Section):** 좌측 텍스트 컬럼과 우측 리스트 컬럼이 모바일에서는 수직으로 100% 폭을 차지하며 정상적으로 스태킹(Stacking)되도록 `w-full` 클래스를 기본으로 부여했습니다 (`w-full lg:w-5/12`, `w-full lg:w-7/12`). 또한 `sticky`와 `top` 속성을 데스크톱(`lg:`) 환경에서만 작동하도록 제한하여 모바일에서 강제로 스크롤 이탈하며 겹치는 문제를 해결했습니다.
+  - **타겟 오디언스 (Target Audience Section):** 동일한 방식으로 좌측 문단과 우측 2x3 카드 그리드의 폭 할당을 `w-full lg:w-1/3 xl:w-1/4` 형태로 모바일 우선 100% 대응으로 수정하여 모바일 환경에서 위아래로 깔끔하게 떨어지도록 교정했습니다.
+
+## [2026-03-12 12:56] 작업 내역 요약 - 전역 박스 디자인(Border Radius) 사각(Square) 통일 (Phase 9)
+- **이슈 바탕:** 랜딩페이지 내의 카드, 버튼, 입력폼 등 요소마다 `rounded-sm`, `rounded-lg`, `rounded-xl` 등 모서리 둥글기 강도가 제각각 적용되어 있어 UI의 일관성이 떨어짐. Tridge 스타일의 권위 있고 정밀한 컨설팅 펌의 신뢰감을 주기 위해 Material Design 기반의 샤프한 사각 에지(Sharp Edge)로 통일 요청.
+- **변경 사항:**
+  - **CSS 변수 강제화 (`globals.css`):** Shadcn UI 컴포넌트들이 기본적으로 참조하는 `--radius-*` 변수를 전역적으로 `0rem`으로 재할당하여, 향후 추가되는 모든 기본 컴포넌트가 사각 형태로 렌더링되도록 원천 수정했습니다.
+  - **Base Component 리팩터링 (`Button`, `Card`, `Input`, `Textarea`, `Checkbox`):** 해당 Base UI 파일 내 하드코딩 되어있던 `rounded-md` 계열의 Tailwind 유틸리티 클래스들을 모두 `rounded-none`으로 정비했습니다.
+  - **개별 컴포넌트 하드코딩 제거:** `app/page.tsx`, `SuccessCases.tsx`, `DiagnosisForm.tsx`, `mypage/page.tsx` 등에 개별적으로 무작위 적용되어 있던 `.rounded-lg`, `.rounded-xl` 등의 클래스를 전부 제거 혹은 `.rounded-none`으로 수정하여, 아바타나 스텝 번호 같은 원형 뱃지를 제외한 모든 '박스형 컨텐츠/버튼'의 모서리 곡률을 완전히 일치(Straight Square)시켰습니다.
