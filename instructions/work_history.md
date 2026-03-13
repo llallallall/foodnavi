@@ -184,3 +184,4 @@
   - `globals.css`: 다크모드 배경을 깊이감 있는 `Deep Navy Black (#050C17)`으로 변경하고, 눈부심 방지를 위해 텍스트 컬러를 `Soft Gray (#F8FAFC)`로 치환. 강조색(Accent)도 톤다운.
   - `app/page.tsx`: 렌딩페이지 각 주요 컨테이너의 하드코딩 색상(`bg-[#051320]`, `bg-[#f9f8f4]`, `bg-white`)을 모두 지우고 `bg-background`나 `bg-secondary` 같은 테마 공통 변수로 덮어씌움.
   - `DiagnosisForm.tsx` & `mypage/page.tsx`: 폼 내부의 `bg-[#fcfbf9]` 박스 및 `bg-white` 인풋을 모두 테마가 자동 전환되는 `bg-background` 변수로 이식 처리 완료.
+  - `Navbar.tsx` & `mypage/page.tsx`: 다크모드에서 배경색과 겹쳐 보이지 않던 `text-secondary/80` 클래스를 테마 변수인 `text-foreground/80`으로 수정하여 시인성 확보.

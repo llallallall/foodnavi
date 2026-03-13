@@ -18,10 +18,10 @@ export function Navbar() {
           />
         </Link>
         <nav className="hidden md:flex gap-8">
-          <Link href="/services" className="text-[15px] font-semibold text-secondary/80 transition-all hover:text-primary hover:-translate-y-0.5">
+          <Link href="/services" className="text-[15px] font-semibold text-foreground/80 transition-all hover:text-primary hover:-translate-y-0.5">
             서비스 소개
           </Link>
-          <Link href="/community/guide" className="text-[15px] font-semibold text-secondary/80 transition-all hover:text-primary hover:-translate-y-0.5">
+          <Link href="/community/guide" className="text-[15px] font-semibold text-foreground/80 transition-all hover:text-primary hover:-translate-y-0.5">
             일본 수출 가이드 & 뉴스
           </Link>
         </nav>

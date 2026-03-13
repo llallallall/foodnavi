@@ -79,7 +79,7 @@ export default function MyPage() {
             </div>
 
             <div className="mt-10 p-4 bg-muted/50 rounded-lg border border-border flex items-center justify-between">
-              <p className="text-sm font-medium text-secondary/80">추가 서류 제출이 필요하신가요?</p>
+              <p className="text-sm font-medium text-foreground/80">추가 서류 제출이 필요하신가요?</p>
               <button className="text-sm font-bold text-primary flex items-center hover:underline">
                 자료 보완하기 <ArrowRight className="w-4 h-4 ml-1" />
               </button>
