@@ -99,10 +99,10 @@ export function DiagnosisForm() {
 
   if (submitSuccess) {
     return (
-      <div className="bg-primary/5 p-12 rounded-none text-center space-y-6 border border-primary/20">
+      <div className="bg-primary/5 p-8 sm:p-12 rounded-none text-center space-y-6 border border-primary/20">
         <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto text-3xl mb-4">✓</div>
-        <h3 className="text-3xl font-serif font-bold text-foreground">진단 접수가 완료되었습니다</h3>
-        <p className="text-foreground/70 text-lg">
+        <h3 className="text-2xl sm:text-3xl font-serif font-bold text-foreground">진단 접수가 완료되었습니다</h3>
+        <p className="text-foreground/70 text-base sm:text-lg break-keep">
           담당 통관사가 기재해주신 내용을 사전 검토 중입니다.<br />
           <strong className="text-foreground">3영업일 이내</strong>에 입력하신 이메일로 1차 진단 리포트를 회신해 드립니다.
         </p>
@@ -116,7 +116,7 @@ export function DiagnosisForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-12 bg-background p-8 md:p-14 rounded-none shadow-xl border border-border/50 relative overflow-hidden">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 sm:space-y-12 bg-background p-5 sm:p-8 md:p-14 rounded-none shadow-xl border border-border/50 relative overflow-hidden">
       {/* Top Accent Line */}
       <div className="absolute top-0 left-0 w-full h-1.5 bg-primary"></div>
       
@@ -132,11 +132,11 @@ export function DiagnosisForm() {
       )}
 
       {/* 1. 신청자 정보 */}
-      <div className="bg-background dark:bg-secondary border border-border p-8 md:p-10 rounded-none relative">
-        <div className="absolute -top-3 left-8 bg-background dark:bg-secondary px-3">
-          <span className="text-primary font-bold text-sm tracking-widest">STEP 01</span>
+      <div className="bg-background dark:bg-secondary border border-border p-5 sm:p-8 md:p-10 rounded-none relative">
+        <div className="absolute -top-3 left-4 sm:left-8 bg-background dark:bg-secondary px-3">
+          <span className="text-primary font-bold text-xs sm:text-sm tracking-widest">STEP 01</span>
         </div>
-        <h3 className="text-2xl font-serif font-bold text-foreground mb-6 flex items-center gap-3">
+        <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground dark:text-secondary-foreground mb-6 flex items-center gap-3">
           신청자(의뢰인) 정보
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -164,13 +164,13 @@ export function DiagnosisForm() {
       </div>
 
       {/* 2. 제품 상세 정보 */}
-      <div className="bg-background dark:bg-secondary border border-border p-8 md:p-10 rounded-none relative">
-        <div className="absolute -top-3 left-8 bg-background dark:bg-secondary px-3">
-          <span className="text-primary font-bold text-sm tracking-widest">STEP 02</span>
+      <div className="bg-background dark:bg-secondary border border-border p-5 sm:p-8 md:p-10 rounded-none relative">
+        <div className="absolute -top-3 left-4 sm:left-8 bg-background dark:bg-secondary px-3">
+          <span className="text-primary font-bold text-xs sm:text-sm tracking-widest">STEP 02</span>
         </div>
-        <h3 className="text-2xl font-serif font-bold text-foreground mb-6 flex flex-col sm:flex-row sm:items-baseline gap-2">
+        <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-6 flex flex-col gap-2">
           진단 대상 제품 정보
-          <span className="text-sm font-normal text-foreground/50 ml-0 sm:ml-2 tracking-normal">제품 정보가 구체적일수록 진단이 정확해집니다.</span>
+          <span className="text-xs sm:text-sm font-normal text-foreground/50 tracking-normal">제품 정보가 구체적일수록 진단이 정확해집니다.</span>
         </h3>
         <div className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -252,11 +252,11 @@ export function DiagnosisForm() {
       </div>
 
       {/* 3. 무역 및 세부 정보 */}
-      <div className="bg-background dark:bg-secondary border border-border p-8 md:p-10 rounded-none relative">
-        <div className="absolute -top-3 left-8 bg-background dark:bg-secondary px-3">
-          <span className="text-primary font-bold text-sm tracking-widest">STEP 03</span>
+      <div className="bg-background dark:bg-secondary border border-border p-5 sm:p-8 md:p-10 rounded-none relative">
+        <div className="absolute -top-3 left-4 sm:left-8 bg-background dark:bg-secondary px-3">
+          <span className="text-primary font-bold text-xs sm:text-sm tracking-widest">STEP 03</span>
         </div>
-        <h3 className="text-2xl font-serif font-bold text-foreground mb-6">무역 및 물류 정보</h3>
+        <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-6">무역 및 물류 정보</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2 md:col-span-2">
             <Label required className="text-foreground font-bold">국내 판매 채널</Label>
@@ -292,11 +292,11 @@ export function DiagnosisForm() {
       </div>
 
       {/* 4. 파일 첨부 및 추가 질문 */}
-      <div className="bg-background dark:bg-secondary border border-border p-8 md:p-10 rounded-none relative">
-        <div className="absolute -top-3 left-8 bg-background dark:bg-secondary px-3">
-          <span className="text-primary font-bold text-sm tracking-widest">STEP 04</span>
+      <div className="bg-background dark:bg-secondary border border-border p-5 sm:p-8 md:p-10 rounded-none relative">
+        <div className="absolute -top-3 left-4 sm:left-8 bg-background dark:bg-secondary px-3">
+          <span className="text-primary font-bold text-xs sm:text-sm tracking-widest">STEP 04</span>
         </div>
-        <h3 className="text-2xl font-serif font-bold text-foreground mb-6">자료 첨부 및 기타</h3>
+        <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-6">자료 첨부 및 기타</h3>
         
         <div className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -354,19 +354,19 @@ export function DiagnosisForm() {
       </div>
 
       {/* 동의 및 제출 */}
-      <div className="bg-secondary p-8 md:p-10 rounded-none text-white space-y-8">
-        <div className="flex items-start space-x-4">
+      <div className="bg-secondary p-5 sm:p-8 md:p-10 rounded-none text-secondary-foreground space-y-6 sm:space-y-8">
+        <div className="flex items-start space-x-3 sm:space-x-4">
           <div className="mt-1 bg-white/10 p-1 rounded">
             <Checkbox id="terms" {...register("privacy_consent")} error={!!errors.privacy_consent} className="border-white/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary" />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="terms" required className="cursor-pointer text-lg font-bold text-white">개인정보 수집 및 이용에 동의합니다</Label>
-            <p className="text-sm text-white/50 break-keep">수집된 정보는 철저한 보안 속에 수출 진단 결과를 제공하기 위한 목적으로만 사용되며, 제3자에게 제공되지 않습니다.</p>
-            {errors.privacy_consent && <p className="text-sm text-red-400 font-bold">{errors.privacy_consent.message}</p>}
+          <div className="space-y-1 sm:space-y-2">
+            <Label htmlFor="terms" required className="cursor-pointer text-base sm:text-lg font-bold text-secondary-foreground">개인정보 수집 및 이용에 동의합니다</Label>
+            <p className="text-xs sm:text-sm text-secondary-foreground/50 break-keep">수집된 정보는 철저한 보안 속에 수출 진단 결과를 제공하기 위한 목적으로만 사용되며, 제3자에게 제공되지 않습니다.</p>
+            {errors.privacy_consent && <p className="text-xs sm:text-sm text-red-400 font-bold">{errors.privacy_consent.message}</p>}
           </div>
         </div>
         
-        <Button type="submit" size="lg" className="w-full text-xl h-20 bg-primary text-secondary font-extrabold hover:bg-primary/90 transition-transform hover:scale-[1.02]" disabled={isSubmitting}>
+        <Button type="submit" size="lg" className="w-full text-base sm:text-xl h-16 sm:h-20 bg-primary text-secondary font-extrabold hover:bg-primary/90 transition-transform hover:scale-[1.02] break-keep" disabled={isSubmitting}>
           {isSubmitting ? "진단 접수 중입니다..." : "프리미엄 무료 수출 진단 접수하기"}
         </Button>
       </div>

@@ -51,25 +51,24 @@ export function SuccessCases() {
       <div className="container mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[1400px] min-[1920px]:max-w-[1700px]">
         
         <div className="text-center mb-16">
-          <p className="text-primary font-bold tracking-widest text-sm md:text-base mb-4 uppercase">Success Stories</p>
-          <h2 className="text-4xl lg:text-5xl font-serif font-extrabold text-foreground leading-tight mb-6">
-            검증된 수출 성공 사례
-          </h2>
+          <p className="text-primary font-bold tracking-widest text-sm uppercase mb-4">SUCCESS STORIES</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">성공 사례</h2>
+          <div className="w-12 h-1 bg-primary mx-auto"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto break-keep leading-relaxed">
             복잡한 규제와 깐깐한 바이어를 넘어, 일본 시장 안착에 성공한 K-Food 기업들의 이야기입니다.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {tabs.map((tab) => (
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {tabs.map((tab, index) => (
             <button
-              key={tab}
+              key={index}
               onClick={() => setActiveTab(tab)}
-              className={`px-8 py-3 rounded-none font-bold text-sm transition-all ${
-                activeTab === tab 
-                  ? 'bg-primary text-secondary shadow-md' 
-                  : 'bg-background text-foreground/70 hover:text-foreground hover:bg-muted border border-border/80'
+              className={`px-6 py-3 font-bold transition-all text-sm ${
+                activeTab === tab
+                  ? "bg-secondary text-secondary-foreground shadow-lg"
+                  : "bg-white dark:bg-muted text-foreground/60 hover:bg-muted"
               }`}
             >
               {tab}

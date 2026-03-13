@@ -145,7 +145,7 @@ export default function Home() {
             </div>
 
             {/* List Module 2 */}
-            <div className="bg-secondary text-white p-8 md:p-10 shadow-tridge rounded-none">
+            <div className="bg-secondary text-secondary-foreground p-8 md:p-10 shadow-tridge rounded-none">
               <h3 className="font-bold text-2xl mb-8 flex items-center gap-3">
                 <ShieldAlert className="w-6 h-6 text-primary" />
                 긴급 일본 규제 모니터링
@@ -257,12 +257,12 @@ export default function Home() {
             <div className="w-full lg:w-5/12 space-y-8 lg:sticky lg:top-24 lg:self-start">
               <div className="space-y-4">
                 <p className="text-primary font-bold tracking-widest text-xl uppercase">왜 Yoon&amp;Partners인가</p>
-                <h2 className="text-4xl lg:text-5xl font-bold text-white leading-snug break-keep">
+                <h2 className="text-4xl lg:text-5xl font-bold text-secondary-foreground leading-snug break-keep">
                   어느 한 쪽만이 아닌<br />
                   <span className="text-primary italic">객관적으로 보는 사람의</span><br />
                   시각은 다릅니다
                 </h2>
-                <p className="text-white/80 leading-relaxed break-keep mt-6">
+                <p className="text-secondary-foreground/80 leading-relaxed break-keep mt-6">
                   26년간 공공기관에서 수출업체와 일본 바이어 양쪽의 현장을 지켜보았습니다. 특정 품목에 집중할 수밖에 없는 민간 영업직과는 달리 일본의 식품 시장 전체를 폭넓게 바라보고 해법을 찾습니다.
                 </p>
               </div>
@@ -283,12 +283,12 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-4">
-                  <p className="text-white/90 leading-relaxed text-lg italic break-keep">
+                  <p className="text-secondary-foreground/90 leading-relaxed text-lg italic break-keep">
                     "수출업체는 장점만 보고 바이어는 단점만 봅니다.<br className="hidden md:block" />
                     저는 거래 현장을 수백 번 목도하며 거래가 성사되는 이유와 깨지는 이유를 제3자의 눈으로 정확히 파악했습니다."
                   </p>
                   <div className="pt-4 border-t border-white/10 mt-4">
-                    <ul className="text-white/60 text-sm space-y-2">
+                    <ul className="text-secondary-foreground/60 text-sm space-y-2">
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> (전) 한일 수출지원 공공기관 26년 근무</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> (현) 일본 통관사 자격 보유 / 관세 무역 전문가</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> 5,000건 이상 성분 및 라벨링 심사 진행</li>
@@ -306,8 +306,8 @@ export default function Home() {
                 <div className="flex gap-6 py-10 border-b border-white/10 first:pt-0">
                   <div className="text-2xl font-light text-primary/70 shrink-0 mt-1">01</div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-white/90">수출업체 + 바이어 양측 현장 경험</h3>
-                    <p className="text-white/60 leading-relaxed break-keep text-sm md:text-base">
+                    <h3 className="text-xl font-bold text-secondary-foreground/90">수출업체 + 바이어 양측 현장 경험</h3>
+                    <p className="text-secondary-foreground/60 leading-relaxed break-keep text-sm md:text-base">
                       단순히 수출 지원만 한 것이 아닙니다. 일본 대형 유통 바이어와 수입업체 간의 실제 상담에 직접 참여하고 경험했습니다. <span className="text-primary font-bold">거래가 성사되지 않는 진짜 이유</span>를 알고 있습니다.
                     </p>
                   </div>
@@ -317,8 +317,8 @@ export default function Home() {
                 <div className="flex gap-6 py-10 border-b border-white/10">
                   <div className="text-2xl font-light text-primary/70 shrink-0 mt-1">02</div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-white/90">공공기관 전문가의 중립적 시각</h3>
-                    <p className="text-white/60 leading-relaxed break-keep text-sm md:text-base">
+                    <h3 className="text-xl font-bold text-secondary-foreground/90">공공기관 전문가의 중립적 시각</h3>
+                    <p className="text-secondary-foreground/60 leading-relaxed break-keep text-sm md:text-base">
                       단기적으로 한 번 팔고 끝날 제품은 매력이 없습니다. <span className="text-primary font-bold">진짜 문제점을 냉정하게</span> 짚어드리고, 해당 제품이 일본 시장에서 롱런할 수 있도록 돕는 것이 저의 역할입니다. 좋은 제품도 준비가 안 되면 실패할 수 있습니다.
                     </p>
                   </div>
@@ -328,8 +328,8 @@ export default function Home() {
                 <div className="flex gap-6 py-10 border-b border-white/10">
                   <div className="text-2xl font-light text-primary/70 shrink-0 mt-1">03</div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-white/90">일본 국가자격 통관사 자격 보유</h3>
-                    <p className="text-white/60 leading-relaxed break-keep text-sm md:text-base">
+                    <h3 className="text-xl font-bold text-secondary-foreground/90">일본 국가자격 통관사 자격 보유</h3>
+                    <p className="text-secondary-foreground/60 leading-relaxed break-keep text-sm md:text-base">
                       식품에 정통한 통관사가 생각보다 많지 않습니다. <span className="text-primary font-bold">통관사 자격을 보유</span>하고 있기 때문에 규제 리스크 분석부터 실제 통관까지 직접 원스톱 대응이 가능합니다.
                     </p>
                   </div>
@@ -339,8 +339,8 @@ export default function Home() {
                 <div className="flex gap-6 py-10 border-b border-white/10 border-b-transparent">
                   <div className="text-2xl font-light text-primary/70 shrink-0 mt-1">04</div>
                   <div className="space-y-3">
-                    <h3 className="text-xl font-bold text-white/90">26년간 구축된 바이어 네트워크 기반 거래 알선</h3>
-                    <p className="text-white/60 leading-relaxed break-keep text-sm md:text-base">
+                    <h3 className="text-xl font-bold text-secondary-foreground/90">26년간 구축된 바이어 네트워크 기반 거래 알선</h3>
+                    <p className="text-secondary-foreground/60 leading-relaxed break-keep text-sm md:text-base">
                       <span className="text-primary font-bold">일본 대형 유통업체, 벤더, 수입업체 네트워크</span>를 활용합니다. 실질적으로 각 제품에 가장 적합한 바이어를 연결합니다. 그렇기 때문에, 바이어 거래알선은 수수료를 미리 받지 않습니다. 단, 저희 <span className="text-primary font-bold">Yoon&amp;Partners와 함께 소비자 검증과 통관까지 마친 제품에 한해서만</span> 거래알선을 지원해드립니다.
                     </p>
                   </div>
