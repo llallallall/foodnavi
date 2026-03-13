@@ -47,12 +47,12 @@ export function SuccessCases() {
     : cases.filter(c => c.category === activeTab);
 
   return (
-    <section className="py-32 px-4 md:px-6 bg-[#f9f8f4] relative border-t border-border">
+    <section className="py-32 px-4 md:px-6 bg-muted relative border-t border-border">
       <div className="container mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[1400px] min-[1920px]:max-w-[1700px]">
         
         <div className="text-center mb-16">
           <p className="text-primary font-bold tracking-widest text-sm md:text-base mb-4 uppercase">Success Stories</p>
-          <h2 className="text-4xl lg:text-5xl font-serif font-extrabold text-secondary leading-tight mb-6">
+          <h2 className="text-4xl lg:text-5xl font-serif font-extrabold text-foreground leading-tight mb-6">
             검증된 수출 성공 사례
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto break-keep leading-relaxed">
@@ -68,8 +68,8 @@ export function SuccessCases() {
               onClick={() => setActiveTab(tab)}
               className={`px-8 py-3 rounded-none font-bold text-sm transition-all ${
                 activeTab === tab 
-                  ? 'bg-secondary text-primary shadow-md' 
-                  : 'bg-white text-secondary/70 hover:text-secondary hover:bg-white border border-border/80'
+                  ? 'bg-primary text-secondary shadow-md' 
+                  : 'bg-background text-foreground/70 hover:text-foreground hover:bg-muted border border-border/80'
               }`}
             >
               {tab}
@@ -79,23 +79,23 @@ export function SuccessCases() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 gap-8">
           {filteredCases.map((item) => (
-            <div key={item.id} className="bg-white p-8 md:p-12 shadow-md border border-border/50 rounded-none relative overflow-hidden group animate-in fade-in zoom-in-95 duration-500">
+            <div key={item.id} className="bg-background dark:bg-secondary p-8 md:p-12 shadow-md border border-border/50 rounded-none relative overflow-hidden group animate-in fade-in zoom-in-95 duration-500">
               <div className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-4 py-1.5 z-10">
                 {item.category}
               </div>
-              <h3 className="text-2xl font-bold text-secondary mb-4 pr-16 leading-snug break-keep whitespace-pre-line">
+              <h3 className="text-2xl font-bold text-foreground mb-4 pr-16 leading-snug break-keep whitespace-pre-line">
                 {item.titleBase}
                 <span className="text-primary">{item.titleHighlight}</span>
               </h3>
               
               <div className="space-y-6 mt-8">
-                <div className="flex gap-4 p-4 bg-red-50/50 rounded-none border border-red-100">
-                  <div className="font-bold text-red-500 shrink-0 w-16">Problem</div>
-                  <p className="text-sm text-secondary/80 leading-relaxed break-keep">{item.problem}</p>
+                <div className="flex gap-4 p-4 bg-destructive/10 rounded-none border border-destructive/20">
+                  <div className="font-bold text-destructive shrink-0 w-16">Problem</div>
+                  <p className="text-sm text-foreground/80 leading-relaxed break-keep">{item.problem}</p>
                 </div>
-                <div className="flex gap-4 p-4 bg-primary/5 rounded-none border border-primary/20">
+                <div className="flex gap-4 p-4 bg-primary/10 rounded-none border border-primary/20">
                   <div className="font-bold text-primary shrink-0 w-16">Solution</div>
-                  <p className="text-sm text-secondary/80 leading-relaxed break-keep">{item.solution}</p>
+                  <p className="text-sm text-foreground/80 leading-relaxed break-keep">{item.solution}</p>
                 </div>
               </div>
             </div>
