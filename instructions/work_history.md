@@ -174,3 +174,13 @@
   - **CSS 변수 강제화 (`globals.css`):** Shadcn UI 컴포넌트들이 기본적으로 참조하는 `--radius-*` 변수를 전역적으로 `0rem`으로 재할당하여, 향후 추가되는 모든 기본 컴포넌트가 사각 형태로 렌더링되도록 원천 수정했습니다.
   - **Base Component 리팩터링 (`Button`, `Card`, `Input`, `Textarea`, `Checkbox`):** 해당 Base UI 파일 내 하드코딩 되어있던 `rounded-md` 계열의 Tailwind 유틸리티 클래스들을 모두 `rounded-none`으로 정비했습니다.
   - **개별 컴포넌트 하드코딩 제거:** `app/page.tsx`, `SuccessCases.tsx`, `DiagnosisForm.tsx`, `mypage/page.tsx` 등에 개별적으로 무작위 적용되어 있던 `.rounded-lg`, `.rounded-xl` 등의 클래스를 전부 제거 혹은 `.rounded-none`으로 수정하여, 아바타나 스텝 번호 같은 원형 뱃지를 제외한 모든 '박스형 컨텐츠/버튼'의 모서리 곡률을 완전히 일치(Straight Square)시켰습니다.
+
+## [2026-03-13 11:05] 작업 내역 요약 - 다크모드 가독성 및 시각적 대비 최적화
+- **이슈 바탕:** 다크모드 환경에서 테마 컬러간 강한 밝기 차이로 인한 가독성 저하 이슈 발생. 인간의 눈에 가장 편안한 대비값을 찾기 위한 시각적 최적화 요청.
+- **분석 내용:**
+  - `globals.css`의 다크모드 변수 구성에서 배경색과 전경색(글자색) 간 대비가 다소 차가워 WCAG 2.1 AA 기준의 편안한 대비 조정 필요.
+  - 앱 전반(`app/page.tsx`, `DiagnosisForm.tsx`, `mypage/page.tsx` 등)에 라이트모드 기준의 헥사코드(`bg-[#fcfbf9]`, `bg-white` 등)가 요소별로 하드코딩되어 다크모드 동기화를 방해하고 있음.
+- **변경 사항:**
+  - `globals.css`: 다크모드 배경을 깊이감 있는 `Deep Navy Black (#050C17)`으로 변경하고, 눈부심 방지를 위해 텍스트 컬러를 `Soft Gray (#F8FAFC)`로 치환. 강조색(Accent)도 톤다운.
+  - `app/page.tsx`: 렌딩페이지 각 주요 컨테이너의 하드코딩 색상(`bg-[#051320]`, `bg-[#f9f8f4]`, `bg-white`)을 모두 지우고 `bg-background`나 `bg-secondary` 같은 테마 공통 변수로 덮어씌움.
+  - `DiagnosisForm.tsx` & `mypage/page.tsx`: 폼 내부의 `bg-[#fcfbf9]` 박스 및 `bg-white` 인풋을 모두 테마가 자동 전환되는 `bg-background` 변수로 이식 처리 완료.

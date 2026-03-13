@@ -76,27 +76,27 @@
   }
 
   .dark {
-    --background: #081528; /* Even deeper navy for true dark mode */
-    --foreground: #f1f5f9; /* Soft Off-White for Comfortable Reading */
+    --background: #050C17; /* Deep Navy Black for true dark mode */
+    --foreground: #F8FAFC; /* Soft Gray/Off-White for Comfortable Reading */
 
-    --primary: #b89742;
-    --primary-foreground: #081528;
+    --primary: #C8A147; /* Brand Gold for visibility */
+    --primary-foreground: #050C17;
 
-    --secondary: #0a1d37; /* Deep Navy for Cards/Sections within Dark Mode */
-    --secondary-foreground: #f1f5f9;
+    --secondary: #0B121E; /* Dark Slate Gray for Cards/Sections within Dark Mode */
+    --secondary-foreground: #E2E8F0;
 
-    --muted: #162a45; /* Softened Navy for secondary backgrounds */
-    --muted-foreground: #cbd5e1;
+    --muted: #111C2E; /* Very dark navy for secondary backgrounds */
+    --muted-foreground: #94A3B8;
 
-    --accent: #0f766e; /* Brighter Teal for visibility in dark mode */
+    --accent: #3E6F58; /* Lightened Dark Green for visibility in dark mode */
     --accent-foreground: #ffffff;
 
     --destructive: #991b1b;
     --destructive-foreground: #f8fafc;
 
-    --border: #1e3350;
-    --input: #1e3350;
-    --ring: #b89742;
+    --border: #1E293B; /* Standard subdued slate border */
+    --input: #1E293B;
+    --ring: #C8A147;
   }
 }
 

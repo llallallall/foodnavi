@@ -12,11 +12,11 @@ export default function MyPage() {
   ];
 
   return (
-    <div className="bg-[#fcfbf9] min-h-screen py-16 px-4 md:px-6">
+    <div className="bg-background min-h-screen py-16 px-4 md:px-6">
       <div className="container mx-auto max-w-5xl">
         <h1 className="text-3xl font-serif font-bold text-secondary mb-8">나의 수출 진행 현황</h1>
 
-        <div className="bg-white p-8 md:p-12 shadow-md border border-[#f0ebe1] rounded-none flex flex-col md:flex-row gap-8">
+        <div className="bg-background dark:bg-secondary p-8 md:p-12 shadow-md border border-border rounded-none flex flex-col md:flex-row gap-8">
           
           <div className="md:w-1/3 border-r border-border/50 pr-8">
             <h2 className="text-xl font-bold text-secondary mb-4">현재 접수 건</h2>

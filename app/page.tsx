@@ -47,7 +47,7 @@ export default function Home() {
           </div>
 
           <div className="flex-1 w-full max-w-md xl:max-w-[440px] 2xl:max-w-[480px]">
-            <div className="bg-[#051320] border border-white/10 rounded-none p-8 space-y-8 shadow-2xl">
+            <div className="bg-[#051320] dark:bg-background border border-white/10 rounded-none p-8 space-y-8 shadow-2xl">
               <h3 className="text-xl font-bold text-primary mb-6">서비스 진행 프로세스</h3>
               <div className="space-y-8">
                 <div className="flex gap-4">
@@ -119,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* 4.5 Data Intelligence Section (New) */}
-      <section className="py-32 px-4 md:px-6 bg-[#fdfbf7] relative">
+      <section className="py-32 px-4 md:px-6 bg-background relative">
         <div className="container mx-auto max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px]">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="space-y-4">
@@ -467,42 +467,42 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-white">
 
                 {/* Item 1 */}
-                <div className="bg-[#f9f8f4] p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-white">
+                <div className="bg-muted p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-background dark:border-border">
                   <div className="text-2xl lg:text-3xl mb-6">🌱</div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl text-secondary mb-4 leading-snug break-keep">일본 수출을 처음<br />시도하는 기업</h3>
                   <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep">어디서부터 시작해야 할지 막막한 분들. 처음부터 올바른 방향을 제시해 드립니다.</p>
                 </div>
 
                 {/* Item 2 */}
-                <div className="bg-[#f9f8f4] p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-white">
+                <div className="bg-muted p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-background dark:border-border">
                   <div className="text-2xl lg:text-3xl mb-6">🚧</div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl text-secondary mb-4 leading-snug break-keep">통관·규제가<br />걱정되는 기업</h3>
                   <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep">서류를 준비했는데도 확신이 안서는 분들. 근본 원인을 찾아드립니다.</p>
                 </div>
 
                 {/* Item 3 */}
-                <div className="bg-[#f9f8f4] p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-white">
+                <div className="bg-muted p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-background dark:border-border">
                   <div className="text-2xl lg:text-3xl mb-6">🔍</div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl text-secondary mb-4 leading-snug break-keep">바이어 연결은 됐지만<br />계약이 안되는 기업</h3>
                   <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep">바이어를 만났지만 거래로 이어지지 않는 분들. 무엇이 부족한지 정확히 알려드립니다.</p>
                 </div>
 
                 {/* Item 4 */}
-                <div className="bg-[#f9f8f4] p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-white">
+                <div className="bg-muted p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-background dark:border-border">
                   <div className="text-2xl lg:text-3xl mb-6">💡</div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl text-secondary mb-4 leading-snug break-keep">좋은 제품이지만<br />시장성이 불확실한 기업</h3>
                   <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep">제품에 자신이 있지만 일본 시장에서 통할지 모르는 분들. 객관적으로 평가해 드립니다.</p>
                 </div>
 
                 {/* Item 5 */}
-                <div className="bg-[#f9f8f4] p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-white">
+                <div className="bg-muted p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-background dark:border-border">
                   <div className="text-2xl lg:text-3xl mb-6">📉</div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl text-secondary mb-4 leading-snug break-keep">수출 비용을 줄이고<br />싶은 기업</h3>
                   <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep">현재 수출하고 있지만 통관·물류 비용이 과다한 분들. 구조적 개선 방안을 제시합니다.</p>
                 </div>
 
                 {/* Item 6 */}
-                <div className="bg-[#f9f8f4] p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-white">
+                <div className="bg-muted p-8 lg:p-10 xl:p-14 flex flex-col items-start border border-background dark:border-border">
                   <div className="text-2xl lg:text-3xl mb-6">🏢</div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl text-secondary mb-4 leading-snug mx-w-full lg:max-w-md break-keep">일본 주류 대형유통업체에 입점을 했지만<br className="hidden md:block" />판매가 부진하여 추가 발주가 없는 기업</h3>
                   <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep">일본 대형유통업체에 지속 가능한 판매를 원하시는 분들. 실제 유통 현장의 바이어 의견을 토대로 대책을 마련합니다.</p>
@@ -604,9 +604,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {/* Card 1 */}
-            <div className="relative bg-white border border-[#e5e7eb] p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-[#004d40] hover:border-[#004d40] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
-              <div className="w-16 h-16 rounded-full bg-[#f0f9f6] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
-                <Check className="w-8 h-8 text-[#004d40] transition-colors duration-300 group-hover:text-white" />
+            <div className="relative bg-background dark:bg-secondary border border-border p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-accent hover:border-accent hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
+                <Check className="w-8 h-8 text-accent transition-colors duration-300 group-hover:text-white" />
               </div>
               <h4 className="text-xl lg:text-2xl font-bold text-secondary mb-6 break-keep transition-colors duration-300 group-hover:text-white">수출 가능성 진단</h4>
               <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep transition-colors duration-300 group-hover:text-white/80">
@@ -616,9 +616,9 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="relative bg-white border border-[#e5e7eb] p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-[#004d40] hover:border-[#004d40] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
-              <div className="w-16 h-16 rounded-full bg-[#f0f9f6] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
-                <FileText className="w-8 h-8 text-[#004d40] transition-colors duration-300 group-hover:text-white" />
+            <div className="relative bg-background dark:bg-secondary border border-border p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-accent hover:border-accent hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
+                <FileText className="w-8 h-8 text-accent transition-colors duration-300 group-hover:text-white" />
               </div>
               <h4 className="text-xl lg:text-2xl font-bold text-secondary mb-6 break-keep transition-colors duration-300 group-hover:text-white">성분 검토 및<br />식품표시라벨 작성</h4>
               <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep transition-colors duration-300 group-hover:text-white/80">
@@ -628,9 +628,9 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="relative bg-white border border-[#e5e7eb] p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-[#004d40] hover:border-[#004d40] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
-              <div className="w-16 h-16 rounded-full bg-[#f0f9f6] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
-                <Users className="w-8 h-8 text-[#004d40] transition-colors duration-300 group-hover:text-white" />
+            <div className="relative bg-background dark:bg-secondary border border-border p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-accent hover:border-accent hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
+                <Users className="w-8 h-8 text-accent transition-colors duration-300 group-hover:text-white" />
               </div>
               <h4 className="text-xl lg:text-2xl font-bold text-secondary mb-6 break-keep transition-colors duration-300 group-hover:text-white">소비자 및<br />시장적합성 검증</h4>
               <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep transition-colors duration-300 group-hover:text-white/80">
@@ -640,9 +640,9 @@ export default function Home() {
             </div>
 
             {/* Card 4 */}
-            <div className="relative bg-white border border-[#e5e7eb] p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-[#004d40] hover:border-[#004d40] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
-              <div className="w-16 h-16 rounded-full bg-[#f0f9f6] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
-                <Truck className="w-8 h-8 text-[#004d40] transition-colors duration-300 group-hover:text-white" />
+            <div className="relative bg-background dark:bg-secondary border border-border p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-accent hover:border-accent hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
+                <Truck className="w-8 h-8 text-accent transition-colors duration-300 group-hover:text-white" />
               </div>
               <h4 className="text-xl lg:text-2xl font-bold text-secondary mb-6 break-keep transition-colors duration-300 group-hover:text-white">시험 통관</h4>
               <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep transition-colors duration-300 group-hover:text-white/80">
@@ -652,9 +652,9 @@ export default function Home() {
             </div>
 
             {/* Card 5 */}
-            <div className="relative bg-white border border-[#e5e7eb] p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-[#004d40] hover:border-[#004d40] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
-              <div className="w-16 h-16 rounded-full bg-[#f0f9f6] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
-                <PlusSquare className="w-8 h-8 text-[#004d40] transition-colors duration-300 group-hover:text-white" />
+            <div className="relative bg-background dark:bg-secondary border border-border p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-accent hover:border-accent hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
+                <PlusSquare className="w-8 h-8 text-accent transition-colors duration-300 group-hover:text-white" />
               </div>
               <h4 className="text-xl lg:text-2xl font-bold text-secondary mb-6 break-keep transition-colors duration-300 group-hover:text-white">일본 기능성표시식품<br />신고 지원</h4>
               <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep transition-colors duration-300 group-hover:text-white/80">
@@ -664,9 +664,9 @@ export default function Home() {
             </div>
 
             {/* Card 6 */}
-            <div className="relative bg-white border border-[#e5e7eb] p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-[#004d40] hover:border-[#004d40] hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
-              <div className="w-16 h-16 rounded-full bg-[#f0f9f6] flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
-                <BadgeCheck className="w-8 h-8 text-[#004d40] transition-colors duration-300 group-hover:text-white" />
+            <div className="relative bg-background dark:bg-secondary border border-border p-12 lg:p-16 flex flex-col items-center text-center group hover:bg-accent hover:border-accent hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:bg-white/10">
+                <BadgeCheck className="w-8 h-8 text-accent transition-colors duration-300 group-hover:text-white" />
               </div>
               <h4 className="text-xl lg:text-2xl font-bold text-secondary mb-6 break-keep transition-colors duration-300 group-hover:text-white">바이어 발굴 및<br />거래 매칭</h4>
               <p className="text-muted-foreground text-sm lg:text-base leading-relaxed break-keep transition-colors duration-300 group-hover:text-white/80">
