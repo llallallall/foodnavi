@@ -96,24 +96,24 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
         <div className="container relative z-10 mx-auto xl:max-w-[1400px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1800px] grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
           <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-bold text-primary">26<span className="text-xl lg:text-2xl font-bold ml-1">年</span></div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary">26年</div>
             <div className="font-bold text-white/90">일본 식품 수출지원</div>
             <div className="text-sm text-white/60">전문 경력</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl lg:text-4xl font-bold text-primary">5,000<span className="text-xl lg:text-2xl font-bold ml-1">+</span></div>
-            <div className="font-bold text-white/90">누적 성분 검토</div>
-            <div className="text-sm text-white/60">일본 규제 적합성 분석</div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary">일본현지</div>
+            <div className="font-bold text-white/90">도쿄 소재</div>
+            <div className="text-sm text-white/60">현지 밀착 컨설팅</div>
           </div>
-          <div className="space-y-3">
-            <div className="text-4xl lg:text-5xl font-bold text-primary tracking-tight">98<span className="text-xl lg:text-2xl font-bold ml-1">%</span></div>
-            <div className="font-bold text-white/90 text-lg">통관 성공률</div>
-            <div className="text-sm text-white/40 tracking-wide">사전 검토 완료 건 기준</div>
+          <div className="space-y-2">
+            <div className="text-3xl lg:text-4xl font-bold text-primary">통관사</div>
+            <div className="font-bold text-white/90">일본 국가자격</div>
+            <div className="text-sm text-white/60">통관사 자격 보유</div>
           </div>
-          <div className="space-y-3">
-            <div className="text-4xl lg:text-5xl font-bold text-primary tracking-tight">통관사</div>
-            <div className="font-bold text-white/90 text-lg">일본 국가자격</div>
-            <div className="text-sm text-white/40 tracking-wide">원스톱 통관 대행</div>
+          <div className="space-y-2">
+            <div className="text-3xl lg:text-4xl font-bold text-primary">3days</div>
+            <div className="font-bold text-white/90">무료 진단보고서</div>
+            <div className="text-sm text-white/60">3일 이내 발송</div>
           </div>
         </div>
       </section>
